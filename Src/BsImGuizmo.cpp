@@ -1,6 +1,5 @@
- #include "BsPrerequisites.h"
-#include "imgui.h"
-#include "ImGuizmo.h"
+
+#include "BsImGuizmo.h"
 #include "Renderer/BsCamera.h"
 #include "Scene/BsTransform.h"
 #include "Input/BsInputFwd.h"

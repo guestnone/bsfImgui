@@ -1,8 +1,6 @@
-#include "imgui.h"
-#include "ImGuizmo.h"
-#include "./BsImgui.h"
 
-#include "BsPrerequisites.h"
+#include "BsImgui.h"
+
 #include "Input/BsInputFwd.h"
 #include "Platform/BsPlatform.h"
 #include "Platform/BsCursor.h"

@@ -1,13 +1,9 @@
-file(GLOB SRCS
-	ThirdParty/imgui/*.cpp
-	ThirdParty/ImGuizmo/*.cpp
-	Src/*.cpp
-)
+include(CMakeSources.cmake)
 
 # test cpp files should be automatically gathered by the unittest library
-list(FILTER SRCS EXCLUDE REGEX ".*test.cpp")
+##list(FILTER SRCS EXCLUDE REGEX ".*test.cpp")
 
-add_library(bsfImgui SHARED ${SRCS})
+add_library(bsfImgui SHARED ${BS_IMGUI_SRC})
 
 add_common_flags(bsfImgui)
 
@@ -15,11 +11,14 @@ add_common_flags(bsfImgui)
 target_include_directories(bsfImgui PUBLIC
 	ThirdParty/imgui
 	ThirdParty/ImGuizmo
+	Src/
 )
 
 # disable default osx/win32 functions (we use bsf inputs only)
 target_compile_definitions(bsfImgui PUBLIC -DIMGUI_DISABLE_OSX_FUNCTIONS -DIMGUI_DISABLE_WIN32_FUNCTIONS)
 # until more standard way for plugins to register their assets
 target_compile_definitions(bsfImgui PUBLIC -DCURRENT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
+# Exports
+target_compile_definitions(bsfImgui PUBLIC -DBS_IMGUI_EXPORTS)
 
 target_link_libraries(bsfImgui bsf)

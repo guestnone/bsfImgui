@@ -1,8 +1,5 @@
-#include "imgui.h"
-#include "ImGuizmo.h"
-#include "BsPrerequisites.h"
-#include "./BsImgui.h"
-#include "./BsImGuizmo.h"
+#include "BsImgui.h"
+#include "BsImGuizmo.h"
 
 namespace bs {
 

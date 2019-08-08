@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "imgui.h"
+#include "BsImguiPrerequisities.h"
 #include "Renderer/BsRendererExtension.h"
 
 struct ImDrawData;
@@ -18,14 +18,14 @@ namespace bs {
  * Retrieve the default imgui shader. Should be used as
  * part of the initialization of the ImguiRendererExtension
 */
-HShader defaultImguiShader();
+BS_IMGUI_EXPORT HShader defaultImguiShader();
 
 // Build default texture for fonts and symbols. Should be used as part of the
 // initialization of the ImguiRendererExtension
-HTexture createDefaultFonts();
+BS_IMGUI_EXPORT HTexture createDefaultFonts();
 
 /* call demo imgui windows */
-void demoImguiUI();
+BS_IMGUI_EXPORT void demoImguiUI();
 
 namespace ct {
 

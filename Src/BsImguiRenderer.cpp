@@ -1,7 +1,4 @@
-
-#include "imgui.h"
-#include "ImGuizmo.h"
-#include "BsPrerequisites.h"
+#include "BsImguiPrerequisities.h"
 #include "RenderAPI/BsBlendState.h"
 #include "Renderer/BsParamBlocks.h"
 #include "Debug/BsBitmapWriter.h"
@@ -18,9 +15,8 @@
 #include "FileSystem/BsDataStream.h"
 #include "Renderer/BsRendererExtension.h"
 #include "BsEngineConfig.h"
-
-#include "./BsImgui.h"
-#include "./BsImGuizmo.h"
+#include "BsImgui.h"
+#include "BsImGuizmo.h"
 
 namespace bs {
 

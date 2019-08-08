@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ImGuizmo.h"
+#include "BsImguiPrerequisities.h"
 
 /*===================================================
 =            Logic specific for ImGuizmo            =
